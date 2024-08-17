@@ -1,0 +1,277 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e7267 0%, #2a5298 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    animation: glowText 2s ease-in-out infinite;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 50px;
+    animation: fadeIn 2s ease-in-out 0.5s forwards;
+}
+
+.glowing-flag {
+    display: flex;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: relative;
+    animation: flagWave 4s ease-in-out infinite;
+}
+
+.flag-segment {
+    width: 33.33%;
+    height: 100%;
+}
+
+.saffron {
+    background: linear-gradient(45deg, #ff9933, #ff6600);
+}
+
+.white {
+    background: #fff;
+    position: relative;
+}
+
+.green {
+    background: linear-gradient(45deg, #138808, #006600);
+}
+
+.chakra {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #000080; /* Dark blue color */
+    position: relative; /* Changed to relative to position spokes inside */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #000080;
+    overflow: hidden;
+}
+
+
+
+.chakra span {
+    position: absolute;
+    width: 2px; /* Adjust thickness of spokes */
+    height: 35px; /* Length of spokes */
+    background: #ffffff; /* Color of spokes */
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg); /* Position and rotate */
+}
+    
+
+
+
+
+.chakra span:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+.chakra span:nth-child(2) { transform: translate(-50%, -100%) rotate(15deg); }
+.chakra span:nth-child(3) { transform: translate(-50%, -100%) rotate(30deg); }
+.chakra span:nth-child(4) { transform: translate(-50%, -100%) rotate(45deg); }
+.chakra span:nth-child(5) { transform: translate(-50%, -100%) rotate(60deg); }
+.chakra span:nth-child(6) { transform: translate(-50%, -100%) rotate(75deg); }
+.chakra span:nth-child(7) { transform: translate(-50%, -100%) rotate(90deg); }
+.chakra span:nth-child(8) { transform: translate(-50%, -100%) rotate(105deg); }
+.chakra span:nth-child(9) { transform: translate(-50%, -100%) rotate(120deg); }
+.chakra span:nth-child(10) { transform: translate(-50%, -100%) rotate(135deg); }
+.chakra span:nth-child(11) { transform: translate(-50%, -100%) rotate(150deg); }
+.chakra span:nth-child(12) { transform: translate(-50%, -100%) rotate(165deg); }
+.chakra span:nth-child(13) { transform: translate(-50%, -100%) rotate(180deg); }
+.chakra span:nth-child(14) { transform: translate(-50%, -100%) rotate(195deg); }
+.chakra span:nth-child(15) { transform: translate(-50%, -100%) rotate(210deg); }
+.chakra span:nth-child(16) { transform: translate(-50%, -100%) rotate(225deg); }
+.chakra span:nth-child(17) { transform: translate(-50%, -100%) rotate(240deg); }
+.chakra span:nth-child(18) { transform: translate(-50%, -100%) rotate(255deg); }
+.chakra span:nth-child(19) { transform: translate(-50%, -100%) rotate(270deg); }
+.chakra span:nth-child(20) { transform: translate(-50%, -100%) rotate(285deg); }
+.chakra span:nth-child(21) { transform: translate(-50%, -100%) rotate(300deg); }
+.chakra span:nth-child(22) { transform: translate(-50%, -100%) rotate(315deg); }
+.chakra span:nth-child(23) { transform: translate(-50%, -100%) rotate(330deg); }
+.chakra span:nth-child(24) { transform: translate(-50%, -100%) rotate(345deg); }
+
+
+.floating-map {
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatUp 5s ease-in-out infinite;
+}
+
+.floating-map img {
+    width: 250px;
+    opacity: 0;
+    animation: fadeInUp 3s ease-in-out 2s forwards;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('assets/particles.png') repeat;
+    animation: moveParticles 30s linear infinite;
+}
+
+/* Animations */
+@keyframes flagWave {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes floatUp {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -20px); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowText {
+    0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    50% { text-shadow: 0 0 40px rgba(255, 255, 255, 1); }
+}
+
+@keyframes moveParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 1920px 1080px; }
+}
+
+@keyframes flagGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    }
+}
+@keyframes rotateChakra {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Fireworks Canvas */
+#fireworksCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://i.ibb.co/x1HTd7S/stars.png') repeat top center;
+    background-size: contain;
+}
+/* General styling for freedom fighters section */
+.freedom-fighters {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.freedom-fighters h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.fighter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.fighter-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.fighter-card:hover {
+    transform: translateY(-10px);
+}
+
+.fighter-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #2c3e50;
+}
+
+.fighter-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.fighter-card p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #777;
+    padding: 0 20px 20px;
+}
+
